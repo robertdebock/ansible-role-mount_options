@@ -4,7 +4,7 @@ Install and configure mount_options on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-mount_options/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-mount_options/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-mount_options/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-mount_options)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/mount_options)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/mount_options)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-mount_options.svg)](https://github.com/robertdebock/ansible-role-mount_options/releases/)|
+|[![github](https://github.com/robertdebock/ansible-role-mount_options/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-mount_options/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-mount_options/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-mount_options)|[![quality](https://img.shields.io/ansible/quality/63360)](https://galaxy.ansible.com/robertdebock/mount_options)|[![downloads](https://img.shields.io/ansible/role/d/63360)](https://galaxy.ansible.com/robertdebock/mount_options)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-mount_options.svg)](https://github.com/robertdebock/ansible-role-mount_options/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -15,7 +15,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 - name: Converge
   hosts: all
   become: yes
-  gather_facts: yes
+  gather_facts: no
 
   roles:
     - role: robertdebock.mount_options
