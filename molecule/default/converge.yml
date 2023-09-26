@@ -1,0 +1,15 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  roles:
+    - role: ansible-role-mount_options
+      # CI runs in a container, where no mounts are available to change, disable this test.
+      # mount_options:
+      #   - path: /
+      #     add_options:
+      #       - noexec
+      #     remove_options:
+      #       - noatime
