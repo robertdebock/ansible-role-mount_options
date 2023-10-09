@@ -4,7 +4,7 @@ Install and configure mount_options on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-mount_options/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-mount_options/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-mount_options/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-mount_options)|[![quality](https://img.shields.io/ansible/quality/63360)](https://galaxy.ansible.com/robertdebock/mount_options)|[![downloads](https://img.shields.io/ansible/role/d/63360)](https://galaxy.ansible.com/robertdebock/mount_options)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-mount_options.svg)](https://github.com/robertdebock/ansible-role-mount_options/releases/)|
+|[![github](https://github.com/robertdebock/ansible-role-mount_options/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-mount_options/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-mount_options/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-mount_options)|[![quality](https://img.shields.io/ansible/quality/35871)](https://galaxy.ansible.com/robertdebock/mount_options)|[![downloads](https://img.shields.io/ansible/role/d/35871)](https://galaxy.ansible.com/robertdebock/mount_options)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-mount_options.svg)](https://github.com/robertdebock/ansible-role-mount_options/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -60,6 +60,46 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 #       - noexec
 #     remove_options:
 #       - noatime
+
+# Here is a set used in may compliancy frameworks.
+# mount_options:
+#   - path: /dev/shm
+#     add_options:
+#       - nodev
+#       - noexec
+#       - nosuid
+#   - path: /var/log
+#     add_options:
+#       - nodev
+#       - noexec
+#       - nosuid
+#   - path: /home
+#     add_options:
+#       - nodev
+#       - nosuid
+#   - path: /boot
+#     add_options:
+#       - nodev
+#       - nosuid
+#   - path: /tmp
+#     add_options:
+#       - nodev
+#       - noexec
+#       - nosuid
+#   - path: /var/tmp
+#     add_options:
+#       - nodev
+#       - noexec
+#       - nosuid
+#   - path: /var/log/audit
+#     add_options:
+#       - nodev
+#       - noexec
+#       - nosuid
+#   - path: /var
+#     add_options:
+#       - nodev
+
 mount_options: []
 ```
 
