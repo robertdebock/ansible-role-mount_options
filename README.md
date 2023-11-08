@@ -2,9 +2,9 @@
 
 Install and configure mount_options on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-mount_options/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-mount_options/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-mount_options/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-mount_options)|[![quality](https://img.shields.io/ansible/quality/35871)](https://galaxy.ansible.com/robertdebock/mount_options)|[![downloads](https://img.shields.io/ansible/role/d/35871)](https://galaxy.ansible.com/robertdebock/mount_options)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-mount_options.svg)](https://github.com/robertdebock/ansible-role-mount_options/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-mount_options/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-mount_options/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-mount_options/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-mount_options)|[![downloads](https://img.shields.io/ansible/role/d/35871)](https://galaxy.ansible.com/robertdebock/mount_options)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-mount_options.svg)](https://github.com/robertdebock/ansible-role-mount_options/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -142,7 +142,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-mount_options/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-mount_options/issues).
 
 ## [License](#license)
 
