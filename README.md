@@ -1,4 +1,4 @@
-# Ansible role [mount_options](#mount_options)
+# [Ansible role mount_options](#mount_options)
 
 Install and configure mount_options on your system.
 
