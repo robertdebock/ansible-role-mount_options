@@ -18,7 +18,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   gather_facts: false
 
   roles:
-    - role: ansible-role-mount_options
+    - role: robertdebock.mount_options
       # CI runs in a container, where no mounts are available to change, disable this test.
       # mount_options:
       #   - path: /
