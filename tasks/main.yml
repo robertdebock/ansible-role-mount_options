@@ -9,11 +9,11 @@
 
 - name: Add mount options
   ansible.posix.mount:
-    fstype: "{{ ansible_mounts | selectattr('mount', 'match', item.path) | map(attribute='fstype') | join('') }}"
+    fstype: "{{ ansible_facts['mounts'] | selectattr('mount', 'match', item.path) | map(attribute='fstype') | join('') }}"
     path: "{{ item.path }}"
-    src: "{{ ansible_mounts | selectattr('mount', 'match', item.path) | map(attribute='device') | join('') }}"
+    src: "{{ ansible_facts['mounts'] | selectattr('mount', 'match', item.path) | map(attribute='device') | join('') }}"
     state: present
-    opts: "{{ (ansible_mounts | selectattr('mount', 'match', item.path) | map(attribute='options') | first | split(',') + item.add_options) | unique | sort | join(',') }}"
+    opts: "{{ (ansible_facts['mounts'] | selectattr('mount', 'match', item.path) | map(attribute='options') | first | split(',') + item.add_options) | unique | sort | join(',') }}"
   loop: "{{ mount_options }}"
   loop_control:
     label: "{{ item.path }} adding {{ item.add_options | default('nothing.') }}"
@@ -32,11 +32,11 @@
 
 - name: Remove mount options
   ansible.posix.mount:
-    fstype: "{{ ansible_mounts | selectattr('mount', 'match', item.path) | map(attribute='fstype') | join('') }}"
+    fstype: "{{ ansible_facts['mounts'] | selectattr('mount', 'match', item.path) | map(attribute='fstype') | join('') }}"
     path: "{{ item.path }}"
-    src: "{{ ansible_mounts | selectattr('mount', 'match', item.path) | map(attribute='device') | join('') }}"
+    src: "{{ ansible_facts['mounts'] | selectattr('mount', 'match', item.path) | map(attribute='device') | join('') }}"
     state: present
-    opts: "{{ (ansible_mounts | selectattr('mount', 'match', item.path) | map(attribute='options') | first | split(',')) | difference(item.remove_options) | sort | join(',') }}"
+    opts: "{{ (ansible_facts['mounts'] | selectattr('mount', 'match', item.path) | map(attribute='options') | first | split(',')) | difference(item.remove_options) | sort | join(',') }}"
   loop: "{{ mount_options }}"
   loop_control:
     label: "{{ item.path }} removing {{ item.remove_options | default('nothing.') }}"
